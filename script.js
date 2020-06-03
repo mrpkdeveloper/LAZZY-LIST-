@@ -1,6 +1,8 @@
 let inptask = $('#inplazzytask')
 let add_btn = $('#btn_add')
-let clear_btn = $("#btn_clear")
+let reset_btn = $("#btn_reset")
+let sort_btn = $("#btn_sort")
+let delete_btn = $("#btn_delete")
 let ultasklist = $("#ultask")
 
 
@@ -29,6 +31,12 @@ inptask.keypress((event) => {
 
 add_btn.click(additem)
 
-clear_btn.click(() => {
+reset_btn.click(() => {
     inptask.val("")
 })
+
+function deletetask() {
+    $('#ultask .done').remove()
+}
+
+delete_btn.click(deletetask)
