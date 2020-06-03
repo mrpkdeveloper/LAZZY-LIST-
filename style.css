@@ -1,0 +1,9 @@
+.heading{
+    margin-top: 3%;
+    font-family: 'Architects Daughter', cursive;
+}
+
+#ultask li.done{
+    text-decoration: line-through;
+    color: brown;
+}
