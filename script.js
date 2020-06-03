@@ -20,6 +20,7 @@ function additem() {
     newtask.click(() => {
         newtask.toggleClass('done')
     })
+    togglebtn()
 }
 
 inptask.keypress((event) => {
@@ -27,16 +28,30 @@ inptask.keypress((event) => {
         additem()
     }
 })
-
-
-add_btn.click(additem)
-
-reset_btn.click(() => {
+function resettask() {
     inptask.val("")
-})
+    togglebtn()
+}
 
 function deletetask() {
     $('#ultask .done').remove()
+    togglebtn()
 }
 
+function sorttask() {
+    $('#ultask .done').appendTo(ultasklist)
+}
+
+function togglebtn() {
+    reset_btn.prop('disabled', inptask.val() == "")
+    add_btn.prop('disabled', inptask.val() == "")
+    sort_btn.prop('disabled', ultasklist.children().length < 1)
+    delete_btn.prop('disabled', ultasklist.children().length < 1)
+}
+
+inptask.on('input', togglebtn)
+
+add_btn.click(additem)
+reset_btn.click(resettask)
 delete_btn.click(deletetask)
+sort_btn.click(sorttask)
