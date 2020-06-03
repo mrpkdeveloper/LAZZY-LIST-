@@ -7,3 +7,6 @@
     text-decoration: line-through;
     color: brown;
 }
+.list-group-item{
+    margin-left: 5%;
+}

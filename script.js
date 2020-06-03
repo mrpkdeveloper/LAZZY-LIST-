@@ -10,7 +10,7 @@ function additem() {
     let lazzy_task = inptask.val()
     // let newtask = '<li class="list-group-item">' + lazzy_task + '</li>'
     let newtask = $('<li>', {
-        'class': 'list-group-item',
+        'class': 'list-group-item col-8',
         text: lazzy_task
     })
     ultasklist.append(newtask)
