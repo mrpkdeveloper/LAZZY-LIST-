@@ -15,16 +15,18 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
 
 <body>
     <div class="container">
-
         <h1 align="center" class="heading">LAZZY-LIST</h1>
         <div class="row">
-            <div class="col m-2">
+            <!-- -------input box---------- -->
+            <!-- md for resposiveness -->
+            <div class="col-md-8">
                 <div class="form-group">
                     <label for="inplazzytask">Lazzy Task</label>
                     <input type="text" class="form-control" id="inplazzytask" aria-describedby="lazzytask...."
@@ -33,15 +35,35 @@
                         task.</small>
                 </div>
             </div>
-        </div>
-        <!-- ----buttons----- -->
-        <div class="row px-2">
-            <button type="button" class="btn btn-success col m-2" id="btn_add">ADD TASK</button>
-            <button type="button" class="btn btn-danger col m-2" id="btn_clear">CLEAR</button>
+
+            <!-- ----buttons----- -->
+            <div class="col-md-4">
+                <div class="row">
+                    <button type="button" class="btn btn-success col m-2" id="btn_add">
+                        <i class="fas fa-plus-square"></i> ADD
+                    </button>
+                    <button type="button" class="btn btn-warning col m-2" id="btn_clear">
+                        <i class="fas fa-backspace"></i> RESET
+                    </button>
+                </div>
+
+                <div class="row">
+                    <button type="button" class="btn btn-primary col  m-2" id="btn_add">
+                        <i class="fas fa-sort-amount-down"></i> SORT
+                    </button>
+                    <button type="button" class="btn btn-danger col m-2" id="btn_clear">
+                        <i class="fas fa-trash-alt"></i> DELETE
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <!-- ------list------ -->
-        <ul class="list-group row m-2" id="ultask"></ul>
+    </div>
+
+
+
+    <!-- ------list------ -->
+    <ul class="list-group row m-2" id="ultask"></ul>
     </div>
 </body>
 
